@@ -77,31 +77,16 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Image Placeholder */}
+          {/* Image */}
           <motion.div
             variants={itemVariants}
-            className="relative h-96 md:h-full min-h-96"
+            className="relative flex justify-center"
           >
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute inset-0 bg-gradient-to-br from-primary-200 to-accent-200 rounded-3xl shadow-2xl overflow-hidden"
-            >
-              {/* Reemplaza este div con tu imagen */}
-              <div className="w-full h-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center">
-                <div className="text-center px-6">
-                  <div className="text-6xl mb-4">👩‍⚕️</div>
-                  <p className="text-gray-600 font-semibold">Angelis García</p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    Nutricionista Profesional
-                  </p>
-                  <p className="text-xs text-gray-400 mt-4 max-w-xs">
-                    Copia tu foto a public/angelis.jpg y reemplaza este div con:
-                    &lt;img src="/angelis.jpg" alt="Angelis" className="w-full h-full object-cover" /&gt;
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              <img 
+                src="/foto.png" 
+                alt="Angelis García - Nutricionista Profesional" 
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
+              />
           </motion.div>
         </motion.div>
       </div>
