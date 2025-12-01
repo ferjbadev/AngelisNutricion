@@ -25,20 +25,20 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-primary-50 to-primary-100 pt-16"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-primary-50 to-primary-100 pt-20 pb-10 md:pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           {/* Text Content */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-4 md:space-y-6 order-2 md:order-1">
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
             >
               Transforma tu <span className="text-primary-600">Salud</span> con
               <span className="text-primary-500"> Nutrición</span>
@@ -46,22 +46,22 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-600 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed"
             >
               Hola, soy <span className="font-semibold text-primary-600">Angelis García</span>, nutricionista profesional. Te ayudaré a alcanzar tus objetivos de salud con un plan personalizado basado en tus necesidades.
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 pt-4"
+              className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4"
             >
               <motion.a
                 href="#booking"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary flex items-center justify-center gap-2"
+                className="btn-primary flex items-center justify-center gap-2 text-sm md:text-base py-2 md:py-3 px-4 md:px-6"
               >
-                Agendar Cita <ArrowRight className="w-5 h-5" />
+                Agendar Cita <ArrowRight className="w-4 md:w-5 h-4 md:h-5" />
               </motion.a>
 
               <motion.a
@@ -70,9 +70,9 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-secondary flex items-center justify-center gap-2"
+                className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base py-2 md:py-3 px-4 md:px-6"
               >
-                <MessageCircle className="w-5 h-5" /> WhatsApp
+                <MessageCircle className="w-4 md:w-5 h-4 md:h-5" /> WhatsApp
               </motion.a>
             </motion.div>
           </motion.div>
@@ -80,12 +80,12 @@ export default function Hero() {
           {/* Image */}
           <motion.div
             variants={itemVariants}
-            className="relative flex justify-center"
+            className="relative flex justify-center order-1 md:order-2 mb-6 md:mb-0"
           >
               <img 
                 src="/foto.png" 
                 alt="Angelis García - Nutricionista Profesional" 
-                className="w-full h-full object-cover rounded-3xl shadow-lg"
+                className="w-72 sm:w-80 md:w-96 h-80 sm:h-96 md:h-full object-cover rounded-2xl shadow-xl"
               />
           </motion.div>
         </motion.div>
