@@ -4,7 +4,7 @@ import { Award, Heart, Zap } from 'lucide-react';
 export default function About() {
   const stats = [
     { icon: Award, label: 'Experiencia', value: '8+ años' },
-    { icon: Heart, label: 'Clientes', value: '500+' },
+    { icon: Heart, label: 'Clientes', value: '50+' },
     { icon: Zap, label: 'Transformaciones', value: '95%' },
   ];
 
@@ -18,8 +18,8 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Sobre Mí</h2>
-          <p className="text-base sm:text-lg text-gray-600">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold md:mb-4">Sobre Mí</h2>
+          <p className="text-base sm:text-lg">
             Conoce mi historia y experiencia
           </p>
         </motion.div>
@@ -49,14 +49,14 @@ export default function About() {
             className="space-y-4 md:space-y-6 order-1 md:order-2"
           >
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
+              <h3 className="text-2xl text-center sm:text-3xl font-bold mb-3 md:mb-4">
                 Hola, soy Angelis García
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 md:mb-4">
+              <p className="text-sm sm:text-base text-center leading-relaxed mb-3 md:mb-4">
                 Nutricionista con más de 10 años de experiencia en nutrición clínica y deportiva. Licenciada por la universidad de Luz y especializada en crear planes personalizados y sostenibles que se adaptan a tu estilo de vida, objetivos y necesidades individuales
               </p>
              
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-center leading-relaxed">
                 Mi compromiso es brindarte un acompañamiento profesional y basado en la ciencia para que alcances resultados duraderos
               </p>
             </div>
