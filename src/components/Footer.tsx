@@ -40,8 +40,9 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
-            <div className="flex items-center space-x-2 mb-3 md:mb-4">
+            <div className="flex items-center space-x-2 mb-3 md:mb-4 md:justify-start justify-center">
               <div className="w-8 md:w-10 h-8 md:h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm md:text-base">MN</span>
               </div>
@@ -59,24 +60,25 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
             <h3 className="font-bold text-base md:text-lg mb-3 md:mb-4">Contacto</h3>
             <div className="space-y-2 md:space-y-3">
               <a
                 href="tel:+584127896105"
-                className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400 hover:text-primary-400 transition-colors"
+                className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400 hover:text-primary-400 transition-colors md:justify-start justify-center"
               >
                 <Phone className="w-4 md:w-5 h-4 md:h-5 flex-shrink-0" />
                 <span>+58 412-789-6105</span>
               </a>
               <a
                 href="mailto:angelis@mundonutri.com"
-                className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400 hover:text-primary-400 transition-colors"
+                className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400 hover:text-primary-400 transition-colors md:justify-start justify-center"
               >
                 <Mail className="w-4 md:w-5 h-4 md:h-5 flex-shrink-0" />
                 <span className="truncate">angelis@mundonutri.com</span>
               </a>
-              <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400">
+              <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-400 md:justify-start justify-center">
                 <MapPin className="w-4 md:w-5 h-4 md:h-5 flex-shrink-0" />
                 <span>Venezuela</span>
               </div>
@@ -89,6 +91,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
             <h3 className="font-bold text-base md:text-lg mb-3 md:mb-4">Enlaces Rápidos</h3>
             <div className="space-y-1 md:space-y-2">
@@ -109,9 +112,9 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-gray-800 py-6 md:py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+          <div className="flex flex-col items-center gap-4 md:gap-6">
             {/* Social Links */}
-            <div className="flex gap-2 md:gap-4">
+            <div className="flex gap-2 md:gap-4 justify-center">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
@@ -138,7 +141,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-gray-400 text-xs md:text-sm text-center md:text-right">
+            <p className="text-gray-400 text-xs md:text-sm text-center">
               © {currentYear} MundoNutri. Todos los derechos reservados.
             </p>
           </div>
