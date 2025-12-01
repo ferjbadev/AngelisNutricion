@@ -78,7 +78,7 @@ export default function Services() {
           className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Mis Servicios</h2>
-          <p className="text-base sm:text-lg text-gray-600">
+          <p className="text-base sm:text-lg ">
             Soluciones integrales para tu bienestar
           </p>
         </motion.div>
@@ -95,7 +95,7 @@ export default function Services() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="bg-white p-5 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="bg-white p-5 md:p-8 border border-black rounded-xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 10 }}
@@ -103,10 +103,12 @@ export default function Services() {
               >
                 <service.icon className="w-6 md:w-7 h-6 md:h-7 text-white" />
               </motion.div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
+
+              <h3 className="text-lg text-center md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {service.title}
               </h3>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+
+              <p className="text-sm md:text-base text-center leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
