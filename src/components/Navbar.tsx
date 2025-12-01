@@ -59,7 +59,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 whileHover={{ color: '#14b8a6' }}
-                className="text-sm lg:text-base text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                className="text-sm lg:text-base hover:text-primary-600 transition-colors font-medium"
               >
                 {item.label}
               </motion.a>
@@ -97,7 +97,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className="w-full text-center px-4 py-3 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-white rounded-xl transition-all duration-200 border border-transparent hover:border-primary-200 hover:shadow-sm"
+                  className="w-full text-center px-4 py-3 text-sm font-medium  hover:text-primary-600 hover:bg-white rounded-xl transition-all duration-200 border border-transparent hover:border-primary-200 hover:shadow-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
