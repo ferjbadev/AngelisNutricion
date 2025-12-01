@@ -9,37 +9,35 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="section-title">Sobre Mí</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Sobre Mí</h2>
+          <p className="text-base sm:text-lg text-gray-600">
             Conoce mi historia y experiencia
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative order-2 md:order-1"
           >
-            <div className="bg-gradient-to-br from-primary-200 to-primary-300 rounded-xl p-8 shadow-lg">
                 <img 
                   src="/foto2.png" 
                   alt="Angelis García - Nutricionista Profesional" 
-                  className="w-full h-full object-cover"
+                  className="w-72 sm:w-80 md:w-96 h-80 sm:h-96 md:h-full object-cover rounded-2xl shadow-xl"
                 />
-            </div>
           </motion.div>
 
           {/* Content */}
@@ -48,34 +46,34 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-4 md:space-y-6 order-1 md:order-2"
           >
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
                 Hola, soy Angelis García
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 md:mb-4">
                 Nutricionista con más de 10 años de experiencia en nutrición clínica y deportiva. Licenciada por la universidad de Luz y especializada en crear planes personalizados y sostenibles que se adaptan a tu estilo de vida, objetivos y necesidades individuales
               </p>
              
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Mi compromiso es brindarte un acompañamiento profesional y basado en la ciencia para que alcances resultados duraderos
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
+            <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4 md:pt-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ y: -5 }}
-                  className="bg-gradient-to-br from-primary-50 to-primary-100 p-4 rounded-lg text-center"
+                  className="bg-gradient-to-br from-primary-50 to-primary-100 p-3 md:p-4 rounded-lg text-center"
                 >
-                  <stat.icon className="w-8 h-8 text-primary-600 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-gray-900">
+                  <stat.icon className="w-6 md:w-8 h-6 md:h-8 text-primary-600 mx-auto mb-1 md:mb-2" />
+                  <p className="text-lg md:text-2xl font-bold text-gray-900">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-gray-600">{stat.label}</p>
+                  <p className="text-xs md:text-sm text-gray-600">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
