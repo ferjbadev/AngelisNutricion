@@ -38,7 +38,7 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="space-y-4 md:space-y-6 order-2 md:order-1">
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+              className="text-3xl text-center sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
             >
               Transforma tu <span className="text-primary-600">Salud</span> con
               <span className="text-primary-500"> Nutrición</span>
@@ -46,9 +46,9 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed"
+              className="text-base text-center sm:text-lg md:text-xl text-gray-600 leading-relaxed"
             >
-              Hola, soy <span className="font-semibold text-primary-600">Angelis García</span>, nutricionista profesional. Te ayudaré a alcanzar tus objetivos de salud con un plan personalizado basado en tus necesidades.
+              Nutricionista profesional, te ayudaré a alcanzar tus objetivos de salud con un plan personalizado basado en tus necesidades.
             </motion.p>
 
             <motion.div
