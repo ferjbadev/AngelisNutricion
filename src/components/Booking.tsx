@@ -67,22 +67,22 @@ Mensaje: ${formData.message}`;
   ];
 
   return (
-    <section id="booking" className="py-20 bg-white">
+    <section id="booking" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="section-title">Agendar Cita</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Agendar Cita</h2>
+          <p className="text-base sm:text-lg text-gray-600">
             Reserva tu consulta de nutrición hoy
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Form */}
           <motion.form
             initial={{ opacity: 0, x: -50 }}
@@ -90,11 +90,11 @@ Mensaje: ${formData.message}`;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="space-y-6"
+            className="space-y-4 md:space-y-6"
           >
             {/* Name */}
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
+              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
                 Nombre Completo
               </label>
               <input
@@ -103,14 +103,14 @@ Mensaje: ${formData.message}`;
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                 placeholder="Tu nombre"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
+              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
                 Correo Electrónico
               </label>
               <input
@@ -119,14 +119,14 @@ Mensaje: ${formData.message}`;
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                 placeholder="tu@email.com"
               />
             </div>
 
             {/* Phone */}
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
+              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
                 Teléfono
               </label>
               <input
@@ -135,21 +135,21 @@ Mensaje: ${formData.message}`;
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                 placeholder="+58 412-789-6105"
               />
             </div>
 
             {/* Service */}
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
+              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
                 Tipo de Servicio
               </label>
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
               >
                 <option value="consulta-inicial">
                   Consulta Inicial
@@ -166,15 +166,15 @@ Mensaje: ${formData.message}`;
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
+              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
                 Mensaje Adicional
               </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                rows={3}
+                className="w-full px-3 md:px-4 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                 placeholder="Cuéntame sobre tus objetivos de salud..."
               />
             </div>
@@ -183,7 +183,7 @@ Mensaje: ${formData.message}`;
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary w-full"
+              className="btn-primary w-full text-sm md:text-base py-2 md:py-3"
             >
               Agendar por WhatsApp
             </motion.button>
@@ -195,69 +195,69 @@ Mensaje: ${formData.message}`;
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-5 md:p-8 rounded-xl">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                 Información de Citas
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {/* Duration */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
                       Duración
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       Las consultas tienen una duración de 60 minutos
                     </p>
                   </div>
                 </div>
 
                 {/* Location */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-primary-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
                       Modalidad
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       Consultas presenciales y virtuales disponibles
                     </p>
                   </div>
                 </div>
 
                 {/* Availability */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Calendar className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Calendar className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
                       Disponibilidad
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       Lunes a viernes, 9:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
 
                 {/* Price */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <User className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 md:w-12 h-10 md:h-12 bg-primary-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <User className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
                       Consulta Inicial
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       Contacta para conocer nuestros precios y promociones
                     </p>
                   </div>
@@ -267,16 +267,16 @@ Mensaje: ${formData.message}`;
 
             {/* Horarios */}
             <div>
-              <h4 className="font-semibold text-gray-900 mb-4">
+              <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-3 md:mb-4">
                 Horarios Disponibles
               </h4>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-3">
                 {timeSlots.map((time) => (
                   <motion.button
                     key={time}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="py-2 px-4 bg-gray-100 hover:bg-primary-600 hover:text-white text-gray-900 rounded-lg font-medium transition-colors"
+                    className="py-1.5 md:py-2 px-2 md:px-4 text-xs md:text-sm bg-gray-100 hover:bg-primary-600 hover:text-white text-gray-900 rounded-lg font-medium transition-colors"
                   >
                     {time}
                   </motion.button>
