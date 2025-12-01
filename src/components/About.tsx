@@ -33,18 +33,12 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl p-8 shadow-lg">
-              <div className="bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl h-96 flex items-center justify-center overflow-hidden">
-                {/* Reemplaza este div con tu imagen */}
-                <div className="text-center px-6">
-                  <div className="text-8xl mb-4">👩‍⚕️</div>
-                  <p className="text-gray-600 font-semibold">Angelis García</p>
-                  <p className="text-sm text-gray-500">Nutricionista Profesional</p>
-                  <p className="text-xs text-gray-400 mt-4">
-                    Reemplazar con imagen real
-                  </p>
-                </div>
-              </div>
+            <div className="bg-gradient-to-br from-primary-200 to-primary-300 rounded-xl p-8 shadow-lg">
+                <img 
+                  src="/foto2.png" 
+                  alt="Angelis García - Nutricionista Profesional" 
+                  className="w-full h-full object-cover"
+                />
             </div>
           </motion.div>
 
