@@ -56,15 +56,18 @@ Mensaje: ${formData.message}`;
     });
   };
 
-  const timeSlots = [
-    '09:00',
-    '10:00',
-    '11:00',
-    '14:00',
-    '15:00',
-    '16:00',
-    '17:00',
-  ];
+const timeSlots = [
+  '9 AM',
+  '10 AM', 
+  '11 AM', 
+  '12 PM', 
+  '1 PM', 
+  '2 PM',
+  '3 PM', 
+  '4 PM', 
+  '5 PM', 
+];
+
 
   return (
     <section id="booking" className="py-12 md:py-20 bg-white">
@@ -76,8 +79,8 @@ Mensaje: ${formData.message}`;
           viewport={{ once: true }}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Agendar Cita</h2>
-          <p className="text-base sm:text-lg text-gray-600">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold  mb-2 md:mb-4">Agendar Cita</h2>
+          <p className="text-base sm:text-lg ">
             Reserva tu consulta de nutrición hoy
           </p>
         </motion.div>
@@ -94,7 +97,7 @@ Mensaje: ${formData.message}`;
           >
             {/* Name */}
             <div>
-              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
+              <label className="block text-xs md:text-sm font-semibold  mb-1 md:mb-2">
                 Nombre Completo
               </label>
               <input
@@ -110,7 +113,7 @@ Mensaje: ${formData.message}`;
 
             {/* Email */}
             <div>
-              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
+              <label className="block text-xs md:text-sm font-semibold  mb-1 md:mb-2">
                 Correo Electrónico
               </label>
               <input
@@ -126,7 +129,7 @@ Mensaje: ${formData.message}`;
 
             {/* Phone */}
             <div>
-              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
+              <label className="block text-xs md:text-sm font-semibold  mb-1 md:mb-2">
                 Teléfono
               </label>
               <input
@@ -142,7 +145,7 @@ Mensaje: ${formData.message}`;
 
             {/* Service */}
             <div>
-              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
+              <label className="block text-xs md:text-sm font-semibold  mb-1 md:mb-2">
                 Tipo de Servicio
               </label>
               <select
@@ -166,7 +169,7 @@ Mensaje: ${formData.message}`;
 
             {/* Message */}
             <div>
-              <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1 md:mb-2">
+              <label className="block text-xs md:text-sm font-semibold  mb-1 md:mb-2">
                 Mensaje Adicional
               </label>
               <textarea
@@ -198,7 +201,7 @@ Mensaje: ${formData.message}`;
             className="space-y-6 md:space-y-8"
           >
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-5 md:p-8 rounded-xl">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
+              <h3 className="text-xl md:text-2xl text-center font-bold  mb-4 md:mb-6">
                 Información de Citas
               </h3>
 
@@ -209,10 +212,10 @@ Mensaje: ${formData.message}`;
                     <Clock className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base  mb-1">
                       Duración
                     </h4>
-                    <p className="text-xs md:text-sm text-gray-600">
+                    <p className="text-xs md:text-sm ">
                       Las consultas tienen una duración de 60 minutos
                     </p>
                   </div>
@@ -224,10 +227,10 @@ Mensaje: ${formData.message}`;
                     <MapPin className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base  mb-1">
                       Modalidad
                     </h4>
-                    <p className="text-xs md:text-sm text-gray-600">
+                    <p className="text-xs md:text-sm ">
                       Consultas presenciales y virtuales disponibles
                     </p>
                   </div>
@@ -239,10 +242,10 @@ Mensaje: ${formData.message}`;
                     <Calendar className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base  mb-1">
                       Disponibilidad
                     </h4>
-                    <p className="text-xs md:text-sm text-gray-600">
+                    <p className="text-xs md:text-sm ">
                       Lunes a viernes, 9:00 AM - 5:00 PM
                     </p>
                   </div>
@@ -254,10 +257,10 @@ Mensaje: ${formData.message}`;
                     <User className="w-5 md:w-6 h-5 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-1">
+                    <h4 className="font-semibold text-sm md:text-base  mb-1">
                       Consulta Inicial
                     </h4>
-                    <p className="text-xs md:text-sm text-gray-600">
+                    <p className="text-xs md:text-sm ">
                       Contacta para conocer nuestros precios y promociones
                     </p>
                   </div>
@@ -267,7 +270,7 @@ Mensaje: ${formData.message}`;
 
             {/* Horarios */}
             <div>
-              <h4 className="font-semibold text-sm md:text-base text-gray-900 mb-3 md:mb-4">
+              <h4 className="font-semibold text-center text-sm md:text-base  mb-3 md:mb-4">
                 Horarios Disponibles
               </h4>
               <div className="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-3">
@@ -276,7 +279,7 @@ Mensaje: ${formData.message}`;
                     key={time}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="py-1.5 md:py-2 px-2 md:px-4 text-xs md:text-sm bg-gray-100 hover:bg-primary-600 hover:text-white text-gray-900 rounded-lg font-medium transition-colors"
+                    className="py-1.5 md:py-2 px-2 md:px-4 text-xs md:text-sm bg-gray-100 hover:bg-primary-600 hover:text-white  rounded-lg font-medium transition-colors"
                   >
                     {time}
                   </motion.button>
