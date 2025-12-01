@@ -31,12 +31,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative order-2 md:order-1"
+            className="relative order-2 md:order-1 flex justify-center"
           >
                 <img 
                   src="/foto2.png" 
                   alt="Angelis García - Nutricionista Profesional" 
-                  className="w-72 sm:w-80 md:w-96 h-80 sm:h-96 md:h-full object-cover rounded-2xl shadow-xl"
+                  className="w-64 sm:w-72 md:w-96 h-72 sm:h-80 md:h-full object-cover rounded-2xl shadow-xl max-w-full"
                 />
           </motion.div>
 
