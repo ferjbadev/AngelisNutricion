@@ -85,7 +85,7 @@ export default function Hero() {
               <img 
                 src="/foto.png" 
                 alt="Angelis García - Nutricionista Profesional" 
-                className="w-72 sm:w-80 md:w-96 h-80 sm:h-96 md:h-full object-cover rounded-2xl shadow-xl"
+                className="w-64 sm:w-72 md:w-96 h-72 sm:h-80 md:h-full object-cover rounded-2xl shadow-xl max-w-full"
               />
           </motion.div>
         </motion.div>
