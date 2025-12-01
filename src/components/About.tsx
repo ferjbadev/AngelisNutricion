@@ -61,13 +61,11 @@ export default function About() {
                 Hola, soy Angelis García
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Soy nutricionista profesional con más de 8 años de experiencia ayudando a personas a transformar su salud a través de la nutrición personalizada.
+                Nutricionista con más de 10 años de experiencia en nutrición clínica y deportiva. Licenciada por la universidad de Luz y especializada en crear planes personalizados y sostenibles que se adaptan a tu estilo de vida, objetivos y necesidades individuales
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Mi enfoque se centra en crear planes nutricionales sostenibles y personalizados que se adapten a tu estilo de vida, objetivos y preferencias alimentarias.
-              </p>
+             
               <p className="text-gray-600 leading-relaxed">
-                He ayudado a más de 500 clientes a lograr sus objetivos de salud, desde pérdida de peso hasta mejora de energía y bienestar general.
+                Mi compromiso es brindarte un acompañamiento profesional y basado en la ciencia para que alcances resultados duraderos
               </p>
             </div>
 
