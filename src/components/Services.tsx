@@ -68,17 +68,17 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-primary-100 to-white">
+    <section id="services" className="py-12 md:py-20 bg-gradient-to-b from-primary-100 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="section-title">Mis Servicios</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-4">Mis Servicios</h2>
+          <p className="text-base sm:text-lg text-gray-600">
             Soluciones integrales para tu bienestar
           </p>
         </motion.div>
@@ -88,25 +88,25 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="bg-white p-5 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 10 }}
-                className="w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center mb-4"
+                className="w-12 md:w-14 h-12 md:h-14 bg-gradient-to-br from-primary-600 to-primary-500 rounded-lg flex items-center justify-center mb-3 md:mb-4"
               >
-                <service.icon className="w-7 h-7 text-white" />
+                <service.icon className="w-6 md:w-7 h-6 md:h-7 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
