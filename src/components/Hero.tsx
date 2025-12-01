@@ -46,7 +46,7 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-base text-center sm:text-lg md:text-xl text-gray-600 leading-relaxed"
+              className="text-base text-center sm:text-lg md:text-xl leading-relaxed"
             >
               Nutricionista profesional, te ayudaré a alcanzar tus objetivos de salud con un plan personalizado basado en tus necesidades.
             </motion.p>
