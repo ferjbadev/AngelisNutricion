@@ -1,9 +1,26 @@
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const navItems = [
     { label: 'Inicio', href: '#home' },
@@ -18,9 +35,9 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full top-0 z-50 bg-white shadow-md"
+      className="fixed w-full top-0 z-50 bg-white shadow-md overflow-x-hidden"
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div className="w-full px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           {/* Logo */}
           <motion.div
@@ -65,21 +82,28 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            ref={menuRef}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden pb-3 space-y-1"
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-gradient-to-b from-white to-primary-50 border-t border-primary-100 pb-6 pt-4"
           >
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block px-3 py-2 text-sm text-gray-700 hover:bg-primary-50 rounded-lg transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            <div className="flex flex-col items-center space-y-2 px-4">
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="w-full text-center px-4 py-3 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-white rounded-xl transition-all duration-200 border border-transparent hover:border-primary-200 hover:shadow-sm"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
         )}
       </div>
